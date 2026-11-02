@@ -1,5 +1,26 @@
-.DS_Store
-.env
-.env.*
-!.env.example
+# Dependencies and package-manager logs
 node_modules/
+.npm/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-store/
+
+# Generated Next.js output and caches
+.next/
+/out/
+/build/
+/dist/
+/coverage/
+*.tsbuildinfo
+next-env.d.ts
+.vercel/
+
+# Local recovery copy; the original is preserved in Git's first commit
+/recovered-export/
+
+# Local secrets and machine-specific files
+.env*
+!.env.example
+.DS_Store
+*.pem

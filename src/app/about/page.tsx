@@ -1,0 +1,574 @@
+import Link from "next/link";
+import { WebsiteForm, ThemeToggle, MobileNavigation } from "@/components/website-controls";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = { title: "About Inotee Group | Inotee Group" };
+
+export default function Page() {
+  return (
+    <main>
+      <section className="relative overflow-hidden px-4 pb-10 pt-10 sm:pb-16">
+        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+          <div className="space-y-7">
+            <span className="inline-flex rounded-full bg-brand/12 px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-brand-strong">
+              {"About Inotee Group"}
+            </span>
+            <div className="space-y-5">
+              <h1 className="max-w-3xl text-balance font-display text-5xl tracking-tight text-ink sm:text-6xl lg:text-7xl">
+                {"Home care built around safety, dignity, and clear communication"}
+              </h1>
+              <p className="max-w-2xl text-lg leading-8 text-muted sm:text-xl">
+                {"Inotee Group helps families across Northern Ireland arrange practical home care with a warm, steady, and professional approach."}
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <Link className="inline-flex items-center justify-center gap-2 rounded-full font-semibold transition duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/40 disabled:pointer-events-none disabled:opacity-60 bg-brand text-slate-950 shadow-float hover:bg-brand/90 px-6 py-3.5 text-base" href="/contact/#care-inquiry">
+                {"Request care"}
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right h-4 w-4">
+                  <path d="M5 12h14">
+
+                  </path>
+                  <path d="m12 5 7 7-7 7">
+
+                  </path>
+                </svg>
+              </Link>
+              <Link className="inline-flex items-center justify-center gap-2 rounded-full font-semibold transition duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/40 disabled:pointer-events-none disabled:opacity-60 bg-panelStrong text-ink ring-1 ring-line hover:bg-panel px-6 py-3.5 text-base" href="/services/">
+                {"View services"}
+              </Link>
+            </div>
+            <p className="text-sm font-medium text-muted">
+              {"Serving families across Belfast and Northern Ireland."}
+            </p>
+          </div>
+          <div>
+            <div className="surface p-8">
+              <img src="/images/care-companionship.jpg" alt="A care worker sharing a creative activity with an older couple" width="1400" height="990" loading="lazy" decoding="async" style={{"display": "block", "width": "100%", "height": "auto", "borderRadius": "24px", "marginBottom": "24px"}} />
+              <p className="text-sm font-semibold uppercase tracking-[0.24em] text-brand-strong">
+                {"Who we help"}
+              </p>
+              <p className="mt-4 text-2xl font-semibold text-ink">
+                {"Families arranging support for an older parent, vulnerable adult, or loved one who needs safe help at home."}
+              </p>
+              <p className="mt-4 text-sm leading-7 text-muted">
+                {"We also support care workers looking for roles and professionals who need to refer someone for home care."}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="section-space">
+        <div className="container-shell">
+          <div className="grid gap-8 lg:grid-cols-[1fr_0.95fr]">
+            <div className="surface p-8">
+              <div className="max-w-3xl space-y-4">
+                <span className="inline-flex rounded-full bg-brand/12 px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-brand-strong">
+                  {"Why Inotee exists"}
+                </span>
+                <h2 className="text-balance font-display text-4xl tracking-tight text-ink sm:text-5xl">
+                  {"Families need support that feels calm, local, and trustworthy"}
+                </h2>
+                <p className="text-lg leading-8 text-muted">
+                  {"Arranging care can feel urgent, emotional, and confusing. We want the next step to feel clearer and more human."}
+                </p>
+              </div>
+              <p className="mt-6 text-sm leading-7 text-muted">
+                {"Inotee Group exists to help people stay safe and supported at home, while giving families the reassurance of clear communication and a care plan they can understand."}
+              </p>
+            </div>
+            <div className="surface p-8">
+              <p className="text-sm font-semibold uppercase tracking-[0.24em] text-brand-strong">
+                {"Care values"}
+              </p>
+              <div className="mt-5 grid gap-4">
+                <div className="rounded-[1.5rem] bg-panelStrong p-4">
+                  <p className="text-sm leading-7 text-ink">
+                    {"Clear communication with families"}
+                  </p>
+                </div>
+                <div className="rounded-[1.5rem] bg-panelStrong p-4">
+                  <p className="text-sm leading-7 text-ink">
+                    {"Respect for privacy, routine, and independence"}
+                  </p>
+                </div>
+                <div className="rounded-[1.5rem] bg-panelStrong p-4">
+                  <p className="text-sm leading-7 text-ink">
+                    {"Care planning shaped around the person"}
+                  </p>
+                </div>
+                <div className="rounded-[1.5rem] bg-panelStrong p-4">
+                  <p className="text-sm leading-7 text-ink">
+                    {"Prompt support when needs feel urgent"}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="section-space bg-white/35 dark:bg-slate-950/20">
+        <div className="container-shell">
+          <div className="max-w-3xl space-y-4">
+            <span className="inline-flex rounded-full bg-brand/12 px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-brand-strong">
+              {"What matters to us"}
+            </span>
+            <h2 className="text-balance font-display text-4xl tracking-tight text-ink sm:text-5xl">
+              {"Care values that families can feel"}
+            </h2>
+            <p className="text-lg leading-8 text-muted">
+              {"Good home care is not just about tasks. It is about safety, trust, comfort, and respect."}
+            </p>
+          </div>
+          <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+            <div className="surface p-6">
+              <p className="text-2xl font-semibold text-ink">
+                {"Safety first"}
+              </p>
+              <p className="mt-3 text-sm leading-7 text-muted">
+                {"Good care starts with safeguarding, clear communication, and support that is planned properly."}
+              </p>
+            </div>
+            <div className="surface p-6">
+              <p className="text-2xl font-semibold text-ink">
+                {"Respect and dignity"}
+              </p>
+              <p className="mt-3 text-sm leading-7 text-muted">
+                {"People should feel listened to, comfortable, and respected in their own home."}
+              </p>
+            </div>
+            <div className="surface p-6">
+              <p className="text-2xl font-semibold text-ink">
+                {"Reliable support"}
+              </p>
+              <p className="mt-3 text-sm leading-7 text-muted">
+                {"Families need care they can depend on, especially after hospital discharge or during difficult changes."}
+              </p>
+            </div>
+            <div className="surface p-6">
+              <p className="text-2xl font-semibold text-ink">
+                {"Local understanding"}
+              </p>
+              <p className="mt-3 text-sm leading-7 text-muted">
+                {"Northern Ireland families need a service that understands local communities, travel, and referral pathways."}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="section-space">
+        <div className="container-shell">
+          <div className="grid gap-8 lg:grid-cols-2">
+            <div className="surface p-8">
+              <div className="max-w-3xl space-y-4">
+                <span className="inline-flex rounded-full bg-brand/12 px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-brand-strong">
+                  {"How care is coordinated"}
+                </span>
+                <h2 className="text-balance font-display text-4xl tracking-tight text-ink sm:text-5xl">
+                  {"Clear planning from the first inquiry"}
+                </h2>
+                <p className="text-lg leading-8 text-muted">
+                  {"We listen, review the support needed, explain the next step, and keep communication practical and easy to follow."}
+                </p>
+              </div>
+              <div className="mt-8 grid gap-4">
+                <div className="rounded-[1.5rem] bg-panelStrong p-4">
+                  <p className="text-sm leading-7 text-ink">
+                    {"A family or referrer tells us what support is needed"}
+                  </p>
+                </div>
+                <div className="rounded-[1.5rem] bg-panelStrong p-4">
+                  <p className="text-sm leading-7 text-ink">
+                    {"We review urgency, care needs, and location"}
+                  </p>
+                </div>
+                <div className="rounded-[1.5rem] bg-panelStrong p-4">
+                  <p className="text-sm leading-7 text-ink">
+                    {"We explain the support plan and next step clearly"}
+                  </p>
+                </div>
+                <div className="rounded-[1.5rem] bg-panelStrong p-4">
+                  <p className="text-sm leading-7 text-ink">
+                    {"We keep communication open as care begins and changes"}
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="surface p-8">
+              <div className="max-w-3xl space-y-4">
+                <span className="inline-flex rounded-full bg-brand/12 px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-brand-strong">
+                  {"Safeguarding"}
+                </span>
+                <h2 className="text-balance font-display text-4xl tracking-tight text-ink sm:text-5xl">
+                  {"A clear commitment to safe, respectful support"}
+                </h2>
+                <p className="text-lg leading-8 text-muted">
+                  {"Families should know that safety, dignity, and communication are taken seriously."}
+                </p>
+              </div>
+              <p className="mt-6 text-sm leading-7 text-muted">
+                {"Safeguarding should never feel like small print. It should be visible in the way people are supported, how concerns are handled, and how families are kept informed."}
+              </p>
+              <p className="mt-6 text-sm leading-7 text-muted">
+                {"We support families across Belfast, Lisburn, Bangor, Newtownabbey, Carrickfergus, Holywood, Antrim, and surrounding parts of Northern Ireland."}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="section-space bg-white/35 dark:bg-slate-950/20">
+        <div className="container-shell">
+          <div className="max-w-3xl space-y-4">
+            <span className="inline-flex rounded-full bg-brand/12 px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-brand-strong">
+              {"Care you can trust"}
+            </span>
+            <h2 className="text-balance font-display text-4xl tracking-tight text-ink sm:text-5xl">
+              {"Visible trust signals matter"}
+            </h2>
+            <p className="text-lg leading-8 text-muted">
+              {"Families should be able to see safety, respect, and clear communication without needing to search for reassurance."}
+            </p>
+          </div>
+          <div className="mt-10">
+            <div className="grid gap-6">
+              <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+                <div className="surface p-6">
+                  <p className="text-lg font-semibold text-ink">
+                    {"Safeguarding-led care"}
+                  </p>
+                  <p className="mt-3 text-sm leading-7 text-muted">
+                    {"Safety, dignity, and clear action are built into the way support is planned and delivered."}
+                  </p>
+                </div>
+                <div className="surface p-6">
+                  <p className="text-lg font-semibold text-ink">
+                    {"AccessNI checks"}
+                  </p>
+                  <p className="mt-3 text-sm leading-7 text-muted">
+                    {"Care workers should be thoroughly checked before working with vulnerable adults."}
+                  </p>
+                </div>
+                <div className="surface p-6">
+                  <p className="text-lg font-semibold text-ink">
+                    {"Trained care workers"}
+                  </p>
+                  <p className="mt-3 text-sm leading-7 text-muted">
+                    {"Families need carers who understand routines, respect, and safe support at home."}
+                  </p>
+                </div>
+                <div className="surface p-6">
+                  <p className="text-lg font-semibold text-ink">
+                    {"Family communication"}
+                  </p>
+                  <p className="mt-3 text-sm leading-7 text-muted">
+                    {"We keep families updated so they are not left guessing what is happening."}
+                  </p>
+                </div>
+                <div className="surface p-6">
+                  <p className="text-lg font-semibold text-ink">
+                    {"Clear care planning"}
+                  </p>
+                  <p className="mt-3 text-sm leading-7 text-muted">
+                    {"Support should be easy to understand, with practical steps that match the person’s needs."}
+                  </p>
+                </div>
+                <div className="surface p-6">
+                  <p className="text-lg font-semibold text-ink">
+                    {"Respect and dignity"}
+                  </p>
+                  <p className="mt-3 text-sm leading-7 text-muted">
+                    {"Every visit should protect comfort, privacy, and independence as much as possible."}
+                  </p>
+                </div>
+                <div className="surface p-6">
+                  <p className="text-lg font-semibold text-ink">
+                    {"Reliable scheduling"}
+                  </p>
+                  <p className="mt-3 text-sm leading-7 text-muted">
+                    {"Consistency matters when families are arranging support around work, school, and hospital discharge."}
+                  </p>
+                </div>
+                <div className="surface p-6">
+                  <p className="text-lg font-semibold text-ink">
+                    {"Local Northern Ireland support"}
+                  </p>
+                  <p className="mt-3 text-sm leading-7 text-muted">
+                    {"Local knowledge helps us respond to families, referrers, and communities more helpfully."}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="section-space">
+        <div className="container-shell">
+          <div className="grid gap-10 lg:grid-cols-[1fr_0.95fr]">
+            <div>
+              <div className="max-w-3xl space-y-4">
+                <span className="inline-flex rounded-full bg-brand/12 px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-brand-strong">
+                  {"Meet the team"}
+                </span>
+                <h2 className="text-balance font-display text-4xl tracking-tight text-ink sm:text-5xl">
+                  {"The people behind the phone, planning, and family support"}
+                </h2>
+                <p className="text-lg leading-8 text-muted">
+                  {"Our care team is here to listen, guide, and support families with clear communication from the first inquiry."}
+                </p>
+              </div>
+            </div>
+            <div className="surface p-6">
+              <p className="text-sm leading-7 text-muted">
+                {"Our care coordination team is available to guide families, answer questions, and explain the next step clearly."}
+              </p>
+            </div>
+          </div>
+          <div className="mt-10">
+            <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+              <div className="surface p-6">
+                <div className="flex h-16 w-16 items-center justify-center rounded-[1.5rem] bg-brand-soft text-sm font-semibold text-brand-strong">
+                  {"Team"}
+                </div>
+                <p className="mt-5 text-xl font-semibold text-ink">
+                  {"Our care coordination team"}
+                </p>
+                <p className="mt-1 text-sm font-medium text-brand-strong">
+                  {"Care inquiries, guidance, and family support"}
+                </p>
+                <p className="mt-3 text-sm leading-7 text-muted">
+                  {"Our team is available to guide families, discuss care needs, and explain the next step clearly."}
+                </p>
+              </div>
+              <div className="surface p-6">
+                <div className="flex h-16 w-16 items-center justify-center rounded-[1.5rem] bg-brand-soft text-sm font-semibold text-brand-strong">
+                  {"Team"}
+                </div>
+                <p className="mt-5 text-xl font-semibold text-ink">
+                  {"Care quality support"}
+                </p>
+                <p className="mt-1 text-sm font-medium text-brand-strong">
+                  {"Safeguarding and service oversight"}
+                </p>
+                <p className="mt-3 text-sm leading-7 text-muted">
+                  {"We focus on safe support, respectful care delivery, and clear communication for families."}
+                </p>
+              </div>
+              <div className="surface p-6">
+                <div className="flex h-16 w-16 items-center justify-center rounded-[1.5rem] bg-brand-soft text-sm font-semibold text-brand-strong">
+                  {"Team"}
+                </div>
+                <p className="mt-5 text-xl font-semibold text-ink">
+                  {"Care planning and scheduling"}
+                </p>
+                <p className="mt-1 text-sm font-medium text-brand-strong">
+                  {"Assessments, visit planning, and updates"}
+                </p>
+                <p className="mt-3 text-sm leading-7 text-muted">
+                  {"We help families understand the next step, arrange support, and keep communication clear as needs change."}
+                </p>
+              </div>
+              <div className="surface p-6">
+                <div className="flex h-16 w-16 items-center justify-center rounded-[1.5rem] bg-brand-soft text-sm font-semibold text-brand-strong">
+                  {"Team"}
+                </div>
+                <p className="mt-5 text-xl font-semibold text-ink">
+                  {"Recruitment support"}
+                </p>
+                <p className="mt-1 text-sm font-medium text-brand-strong">
+                  {"Applications and candidate communication"}
+                </p>
+                <p className="mt-3 text-sm leading-7 text-muted">
+                  {"Candidates can expect a straightforward recruitment process with clear communication and support."}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="section-space bg-white/35 dark:bg-slate-950/20">
+        <div className="container-shell">
+          <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
+            <div className="surface p-8">
+              <div className="max-w-3xl space-y-4">
+                <span className="inline-flex rounded-full bg-brand/12 px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-brand-strong">
+                  {"Request care"}
+                </span>
+                <h2 className="text-balance font-display text-4xl tracking-tight text-ink sm:text-5xl">
+                  {"If your family needs support, talk to us"}
+                </h2>
+                <p className="text-lg leading-8 text-muted">
+                  {"Tell us what support is needed and we will guide you through the next step."}
+                </p>
+              </div>
+            </div>
+            <div className="surface p-8">
+              <div className="grid gap-5">
+                <WebsiteForm className="grid gap-4" kind="inquiry">
+                  <div className="grid gap-4 sm:grid-cols-2">
+                    <label className="grid gap-2 text-sm font-medium text-ink">
+                      {"Full name"}
+                      <input className="h-12 w-full rounded-2xl border border-line bg-white/80 px-4 text-sm text-ink outline-none transition placeholder:text-muted focus:border-brand focus:ring-4 focus:ring-brand/10 dark:bg-slate-900/70" placeholder="Your full name" name="fullName"  required />
+                    </label>
+                    <label className="grid gap-2 text-sm font-medium text-ink">
+                      {"Phone number"}
+                      <input className="h-12 w-full rounded-2xl border border-line bg-white/80 px-4 text-sm text-ink outline-none transition placeholder:text-muted focus:border-brand focus:ring-4 focus:ring-brand/10 dark:bg-slate-900/70" placeholder="Best number to call" name="phoneNumber"  required />
+                    </label>
+                  </div>
+                  <div className="grid gap-4 sm:grid-cols-2">
+                    <label className="grid gap-2 text-sm font-medium text-ink">
+                      {"Email"}
+                      <input className="h-12 w-full rounded-2xl border border-line bg-white/80 px-4 text-sm text-ink outline-none transition placeholder:text-muted focus:border-brand focus:ring-4 focus:ring-brand/10 dark:bg-slate-900/70" type="email" placeholder="you@example.com" name="email"  required />
+                    </label>
+                    <label className="grid gap-2 text-sm font-medium text-ink">
+                      {"Postcode"}
+                      <input className="h-12 w-full rounded-2xl border border-line bg-white/80 px-4 text-sm text-ink outline-none transition placeholder:text-muted focus:border-brand focus:ring-4 focus:ring-brand/10 dark:bg-slate-900/70" placeholder="BT1 1AA" name="postcode" />
+                    </label>
+                  </div>
+                  <div className="grid gap-4 sm:grid-cols-2">
+                    <label className="grid gap-2 text-sm font-medium text-ink">
+                      {"Who needs care?"}
+                      <input className="h-12 w-full rounded-2xl border border-line bg-white/80 px-4 text-sm text-ink outline-none transition placeholder:text-muted focus:border-brand focus:ring-4 focus:ring-brand/10 dark:bg-slate-900/70" placeholder="For example: my mum, my dad, my aunt" name="whoNeedsCare" />
+                    </label>
+                    <label className="grid gap-2 text-sm font-medium text-ink">
+                      {"Type of care needed"}
+                      <select className="h-12 w-full rounded-2xl border border-line bg-white/80 px-4 text-sm text-ink outline-none transition focus:border-brand focus:ring-4 focus:ring-brand/10 dark:bg-slate-900/70" name="typeOfCareNeeded">
+                        <option>
+                          {"Post-hospital recovery care"}
+                        </option>
+                        <option>
+                          {"Dementia care"}
+                        </option>
+                        <option>
+                          {"Personal care"}
+                        </option>
+                        <option>
+                          {"Overnight care"}
+                        </option>
+                        <option>
+                          {"Companionship care"}
+                        </option>
+                        <option>
+                          {"Live-in care"}
+                        </option>
+                        <option>
+                          {"Disability support"}
+                        </option>
+                        <option>
+                          {"Elderly care"}
+                        </option>
+                        <option>
+                          {"Not sure yet"}
+                        </option>
+                      </select>
+                    </label>
+                  </div>
+                  <div className="grid gap-4 sm:grid-cols-2">
+                    <label className="grid gap-2 text-sm font-medium text-ink">
+                      {"How urgent is this?"}
+                      <select className="h-12 w-full rounded-2xl border border-line bg-white/80 px-4 text-sm text-ink outline-none transition focus:border-brand focus:ring-4 focus:ring-brand/10 dark:bg-slate-900/70" name="urgency">
+                        <option>
+                          {"Urgent: needed within 24 to 48 hours"}
+                        </option>
+                        <option>
+                          {"Soon: needed this week"}
+                        </option>
+                        <option>
+                          {"Planning ahead"}
+                        </option>
+                      </select>
+                    </label>
+                    <label className="grid gap-2 text-sm font-medium text-ink">
+                      {"Is this linked to hospital discharge?"}
+                      <select className="h-12 w-full rounded-2xl border border-line bg-white/80 px-4 text-sm text-ink outline-none transition focus:border-brand focus:ring-4 focus:ring-brand/10 dark:bg-slate-900/70" name="linkedToHospitalDischarge" defaultValue="Not sure">
+                        <option>
+                          {"Yes"}
+                        </option>
+                        <option>
+                          {"No"}
+                        </option>
+                        <option>
+                          {"Not sure"}
+                        </option>
+                      </select>
+                    </label>
+                  </div>
+                  <div className="grid gap-4 sm:grid-cols-2">
+                    <label className="grid gap-2 text-sm font-medium text-ink">
+                      {"Does the person live alone?"}
+                      <select className="h-12 w-full rounded-2xl border border-line bg-white/80 px-4 text-sm text-ink outline-none transition focus:border-brand focus:ring-4 focus:ring-brand/10 dark:bg-slate-900/70" name="livesAlone" defaultValue="Not sure">
+                        <option>
+                          {"Yes"}
+                        </option>
+                        <option>
+                          {"No"}
+                        </option>
+                        <option>
+                          {"Sometimes"}
+                        </option>
+                        <option>
+                          {"Not sure"}
+                        </option>
+                      </select>
+                    </label>
+                    <label className="grid gap-2 text-sm font-medium text-ink">
+                      {"Main concern"}
+                      <select className="h-12 w-full rounded-2xl border border-line bg-white/80 px-4 text-sm text-ink outline-none transition focus:border-brand focus:ring-4 focus:ring-brand/10 dark:bg-slate-900/70" name="mainConcern">
+                        <option>
+                          {"Falls risk"}
+                        </option>
+                        <option>
+                          {"Medication"}
+                        </option>
+                        <option>
+                          {"Washing/dressing"}
+                        </option>
+                        <option>
+                          {"Meals"}
+                        </option>
+                        <option>
+                          {"Dementia"}
+                        </option>
+                        <option>
+                          {"Loneliness"}
+                        </option>
+                        <option>
+                          {"Night-time safety"}
+                        </option>
+                        <option>
+                          {"Family burnout"}
+                        </option>
+                        <option>
+                          {"Other"}
+                        </option>
+                      </select>
+                    </label>
+                  </div>
+                  <div className="grid gap-4 sm:grid-cols-2">
+                    <label className="grid gap-2 text-sm font-medium text-ink">
+                      {"Preferred callback time"}
+                      <input className="h-12 w-full rounded-2xl border border-line bg-white/80 px-4 text-sm text-ink outline-none transition placeholder:text-muted focus:border-brand focus:ring-4 focus:ring-brand/10 dark:bg-slate-900/70" placeholder="Morning, afternoon, evening, or a specific time" name="preferredCallbackTime" />
+                    </label>
+                    <label className="grid gap-2 text-sm font-medium text-ink">
+                      {"Suggested care options"}
+                      <div className="rounded-[1.5rem] border border-line bg-panelStrong px-4 py-3 text-sm leading-7 text-muted">
+                        {"Post-hospital recovery care, Overnight care, Personal care, Dementia care"}
+                      </div>
+                    </label>
+                  </div>
+                  <label className="grid gap-2 text-sm font-medium text-ink">
+                    {"Message"}
+                    <textarea className="min-h-[132px] w-full rounded-2xl border border-line bg-white/80 px-4 py-3 text-sm text-ink outline-none transition placeholder:text-muted focus:border-brand focus:ring-4 focus:ring-brand/10 dark:bg-slate-900/70" placeholder="Tell us anything helpful about the situation, timing, discharge plans, or what your family is most worried about." name="message">
+
+                    </textarea>
+                  </label>
+                  <button type="submit" className="inline-flex items-center justify-center gap-2 rounded-full font-semibold transition duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/40 disabled:pointer-events-none disabled:opacity-60 bg-brand text-slate-950 shadow-float hover:bg-brand/90 px-6 py-3.5 text-base">
+                    {"Request care today"}
+                  </button>
+                </WebsiteForm>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}
