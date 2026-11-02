@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { SiteHeader, SiteFooter } from "@/components/site-shell";
 import "./globals.css";
+import "./facelift.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://inoteegroup.com"),

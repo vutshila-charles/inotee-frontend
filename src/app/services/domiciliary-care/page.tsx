@@ -6,7 +6,7 @@ export const metadata: Metadata = { title: "Domiciliary Care Staff | Inotee Grou
 
 export default function Page() {
   return (
-    <main className="flex-1">
+    <main id="main-content" className="flex-1">
       <section className="relative isolate overflow-hidden border-b border-[rgba(13,31,78,0.08)] bg-[var(--color-brand-strong)] text-white">
         <img alt="Domiciliary Care Staff hero image" decoding="async" className="object-cover" style={{"position": "absolute", "height": "100%", "width": "100%", "left": "0", "top": "0", "right": "0", "bottom": "0", "color": "transparent"}} src="/images/service-domiciliary-hero.png" />
         <div className="absolute inset-0 bg-[linear-gradient(115deg,rgba(8,21,50,0.92)_0%,rgba(8,21,50,0.82)_40%,rgba(8,21,50,0.62)_100%)]">
@@ -17,7 +17,7 @@ export default function Page() {
         </div>
         <div className="content-shell relative py-24 sm:py-28 lg:py-32">
           <p className="text-sm font-medium uppercase tracking-[0.34em] text-white/72">
-            {"Tavat Healthcare Recruitment"}
+            {"Inotee Group"}
           </p>
           <div className="mt-5 h-1 w-20 rounded-full bg-[var(--color-accent)]">
 
@@ -564,7 +564,7 @@ export default function Page() {
       <section className="section-space">
         <div className="content-shell">
           <div className="relative isolate overflow-hidden rounded-[2rem] border border-white/10 bg-[linear-gradient(135deg,#0d1f4e_0%,#153271_60%,#26458d_100%)] px-6 py-12 text-white shadow-2xl shadow-[rgba(13,31,78,0.18)] sm:px-10 sm:py-16">
-            <img alt="Tavat Healthcare Recruitment call-to-action background" loading="lazy" decoding="async" className="object-cover" style={{"position": "absolute", "height": "100%", "width": "100%", "left": "0", "top": "0", "right": "0", "bottom": "0", "color": "transparent"}} src="/images/cta.png" />
+            <img alt="Inotee Group call-to-action background" loading="lazy" decoding="async" className="object-cover" style={{"position": "absolute", "height": "100%", "width": "100%", "left": "0", "top": "0", "right": "0", "bottom": "0", "color": "transparent"}} src="/images/cta.png" />
             <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(8,21,50,0.9)_0%,rgba(13,31,78,0.8)_55%,rgba(21,50,113,0.58)_100%)]">
 
             </div>

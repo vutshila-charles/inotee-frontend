@@ -6,7 +6,7 @@ export const metadata: Metadata = { title: "Privacy Policy | Inotee Group | Inot
 
 export default function Page() {
   return (
-    <main className="flex-1">
+    <main id="main-content" className="flex-1">
       <section className="relative isolate overflow-hidden border-b border-[rgba(13,31,78,0.08)] bg-[var(--color-brand-strong)] text-white">
         <div className="absolute inset-0 bg-[linear-gradient(115deg,rgba(8,21,50,0.92)_0%,rgba(8,21,50,0.82)_40%,rgba(8,21,50,0.62)_100%)]">
 
@@ -16,7 +16,7 @@ export default function Page() {
         </div>
         <div className="content-shell relative py-24 sm:py-28 lg:py-32">
           <p className="text-sm font-medium uppercase tracking-[0.34em] text-white/72">
-            {"Tavat Healthcare Recruitment"}
+            {"Inotee Group"}
           </p>
           <div className="mt-5 h-1 w-20 rounded-full bg-[var(--color-accent)]">
 
@@ -40,7 +40,7 @@ export default function Page() {
                 {"Information We Collect"}
               </h2>
               <p>
-                {"We collect the information you choose to provide when you contact us, apply for work, request staffing support, subscribe to updates, or otherwise engage with Tavat Healthcare Recruitment."}
+                {"We collect the information you choose to provide when you contact us, apply for work, request staffing support, subscribe to updates, or otherwise engage with Inotee Group."}
               </p>
               <p>
                 {"This may include names, email addresses, telephone numbers, employment history, qualifications, compliance documentation, organisation details, and any information needed to respond to your enquiry or process your application."}

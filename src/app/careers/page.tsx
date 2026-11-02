@@ -6,7 +6,7 @@ export const metadata: Metadata = { title: "Care Roles Across Northern Ireland |
 
 export default function Page() {
   return (
-    <main>
+    <main id="main-content">
       <section className="relative overflow-hidden px-4 pb-10 pt-10 sm:pb-16">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
           <div className="space-y-7">

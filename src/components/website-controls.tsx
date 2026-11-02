@@ -38,6 +38,7 @@ type Props = ComponentProps<"form"> & { kind: Kind };
 export function WebsiteForm({ children, kind, ...props }: Props) {
   const [pending, setPending] = useState(false);
   const [status, setStatus] = useState("");
+  const [failed, setFailed] = useState(false);
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const form = event.currentTarget;
@@ -49,6 +50,7 @@ export function WebsiteForm({ children, kind, ...props }: Props) {
     for (const key of ["Source", "Medium", "Campaign", "Content", "Term"]) data[`utm${key}`] = query.get(`utm_${key.toLowerCase()}`) || "";
     setPending(true);
     setStatus("");
+    setFailed(false);
     try {
       const base = (process.env.NEXT_PUBLIC_INOTEE_API_URL || "https://api.inoteegroup.com/api").replace(/\/$/, "");
       const multipart = kind === "application";
@@ -57,7 +59,7 @@ export function WebsiteForm({ children, kind, ...props }: Props) {
         data.full_name = data.fullName || data.name || "";
         data.inquiry_type = data.typeOfCareNeeded || data.topic || data.service || "General inquiry";
         data.phone = data.phoneNumber || data.phone || "";
-        if (!data.message) data.message = [data.whoNeedsCare && `Who needs care: ${data.whoNeedsCare}`, data.urgency && `Urgency: ${data.urgency}`, data.mainConcern && `Main concern: ${data.mainConcern}`].filter(Boolean).join("\n");
+        if (!data.message) data.message = [data.typeOfCareNeeded && `Care interest: ${data.typeOfCareNeeded}`, data.postcode && `Care postcode: ${data.postcode}`, data.whoNeedsCare && `Who needs care: ${data.whoNeedsCare}`, data.urgency && `Urgency: ${data.urgency}`, data.mainConcern && `Main concern: ${data.mainConcern}`].filter(Boolean).join("\n");
       }
       if (multipart && !fields.has("applicationData")) fields.set("applicationData", JSON.stringify(data));
       const response = await fetch(`${base}${endpoint}`, {
@@ -66,16 +68,18 @@ export function WebsiteForm({ children, kind, ...props }: Props) {
         body: multipart ? fields : JSON.stringify(data),
         signal: AbortSignal.timeout(20000),
       });
-      const result = await response.json().catch(() => ({}));
+      const result = await response.json().catch(() => { throw new Error("We couldn’t confirm your request. Please call 028 9600 5679 or email info@inoteegroup.com."); });
       if (!response.ok || result.success === false) throw new Error(result.message || "We could not send your request. Please call 028 9600 5679 or email info@inoteegroup.com.");
       setStatus(result.message || "Thank you. Your request has been sent to our team.");
       form.reset();
     } catch (error) {
-      setStatus(error instanceof Error && error.name !== "TimeoutError" ? error.message : "The request timed out. Please call 028 9600 5679.");
+      setFailed(true);
+      setStatus(error instanceof Error && error.name !== "TypeError" && error.name !== "TimeoutError" ? error.message : "We couldn’t reach our care team online. Please call 028 9600 5679 or email info@inoteegroup.com.");
     } finally { setPending(false); }
   }
   return <form {...props} onSubmit={submit} aria-busy={pending}>
     <fieldset disabled={pending} style={{ display: "contents" }}>{children}</fieldset>
-    {status && <p role="status" style={{ gridColumn: "1 / -1", padding: 16, border: "1px solid currentColor", borderRadius: 12 }}>{status}</p>}
+    {pending && <p role="status" style={{ gridColumn: "1 / -1", fontSize: 13 }}>Sending your request…</p>}
+    {status && <p role={failed ? "alert" : "status"} style={{ gridColumn: "1 / -1", padding: 16, border: "1px solid currentColor", borderRadius: 12 }}>{status}</p>}
   </form>;
 }

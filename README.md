@@ -19,7 +19,23 @@ npm run build
 npm start
 ```
 
-`npm start` runs a previously built production application. Deploy this project to a host that supports Next.js/Node.js. The old Apache static-export `.htaccess` is in the recovery copy and does not run this application.
+`npm run build` creates the static website in `out/`. `npm start` previews that export at http://localhost:3000 using Python 3. The production host only needs to serve static files; Node.js is needed on your build machine.
+
+## Deploy with SCP
+
+```bash
+npm run deploy
+```
+
+This builds the site first, then runs your deployment command:
+
+```bash
+scp -P 22000 -r out/* inoteegr@169.239.217.62:~/public_html/
+```
+
+SSH authentication for `inotee` must be configured or entered when prompted. SCP uploads the generated website files, including `_next/`, without uploading source, secrets, or `node_modules`. It overwrites matching remote files but does not delete obsolete files already on the server. The `out/*` glob skips hidden files, so an existing server `.htaccess` is left in place. Apache must serve directory `index.html` files for the exported trailing-slash routes.
+
+Public forms still call the separate API directly from the browser. Set `NEXT_PUBLIC_INOTEE_API_URL` before building if it needs changing; the API must allow requests from https://inoteegroup.com.
 
 ## Project structure
 
@@ -46,8 +62,12 @@ The nine-step recruitment form and its payload mapping were reconstructed from t
 
 The external API is not part of this repository. The recovered API base is `https://api.inoteegroup.com/api`. To override it, copy `.env.example` to `.env.local` and set `NEXT_PUBLIC_INOTEE_API_URL`. This value is embedded at build time. Form endpoints follow the mappings found in the backup: `/v1/public/inquiries`, `/v1/public/newsletter-subscriptions`, `/referrals`, and `/v1/public/recruitment/applications`, relative to that API base.
 
-Production submissions and backend acceptance have not been verified. No test inquiries or job applications were sent to the live API. Existing admin screens and the separate consulting application remain in `recovered-export/`; their authenticated logic was not reconstructed. Some older public service and legal pages still contain the backup's Tavat branding and require a content review before deployment.
+Production submissions and backend acceptance have not been verified. No test inquiries or job applications were sent to the live API. Existing admin screens and the separate consulting application remain in `recovered-export/`; their authenticated logic was not reconstructed. The leftover Tavat company-name text has been corrected, but older staffing/legal copy still requires a separate content review before deployment.
 
 The recovered homepage matched the live homepage exactly on 2 November 2026 before the contact and photo edits. This does not establish that all backed-up pages matched production. Local changes have not been deployed to the live host.
 
 Git remote: https://github.com/vutshila-charles/inotee-frontend.git. The earlier push failed because terminal GitHub authentication was not configured.
+
+## Website design
+
+The care website has a responsive facelift across the homepage, About, care services, service details and contact page. Shared care content and contact details are in `src/lib/care-content.ts`; reusable enquiries and care layouts are in `src/components/`; the new visual styles are in `src/app/facelift.css`. See [design research and validation notes](docs/site-redesign.md).
